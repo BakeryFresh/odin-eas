@@ -6,7 +6,7 @@ body {
     background-color: #122a36;
 }
 
-/* theme colours 
+/* theme colors 
 dark blue #122a36 
 cream #dfd9da 
 red/orange #b2533e 
@@ -41,6 +41,15 @@ blue #37a1a4 */
  height: 50px;
 }
 
+.grid-container{
+    display: flex;
+}
+
+.grid {
+    display: grid;
+    grid-auto-rows: 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(8rem,1fr));
+}
 
 .footer {
   display: flex;
