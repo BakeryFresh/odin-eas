@@ -1,39 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Etch-A-Sketch</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <link href="./images/favicon.ico" rel="icon" type="image/x-icon" />
-  
-</head>
-<body>
+  </head>
+  <body>
     <div class="header">
-        <div class="logo">Etch-A-Sketch</div>
+      <div class="logo">Etch-A-Sketch</div>
     </div>
     <div class="menu-bar">
-        <button id="btnOne">Generate</button>
-        <button id="btnTwo">Reset</button>
-        <button id="btnThree">btnThree</button>
-        <input type="color" name="selectColor" id="selectColor" value="#37a1a4">
-        <input type="range" name="gridSize" id="gridSize" min="0" max="10">
+      <button id="btnOne">Generate</button>
+      <button id="btnTwo">Reset</button>
+      <button id="btnThree">Random</button>
+      <input type="color" name="selectColor" id="selectColor" value="#37a1a4" />
+      <input
+        type="range"
+        name="gridSize"
+        id="gridSize"
+        min="2"
+        max="100"
+        value="16"
+        step="2"
+        oninput="rangeValue.innerText = this.value">
+        <p id="rangeValue" style="color: #b2533e;">16</p>
+        
     </div>
     <div class="grid-container">
-    <div class="grid" id="grid"></div>
+      <div class="grid" id="grid"></div>
     </div>
     <div class="footer">
-        <a href="https://github.com/BakeryFresh/odin-rock-paper-scissors"
-          ><img
-            src="./images/github-mark-white.svg"
-            alt="github logo"
-            style="height: 20px; width: auto"
-          />
-        </a>
-        <p>BakeryFresh</p>
-      </div>
-
-</body>
-<script src="script.js"></script>
+      <a href="https://github.com/BakeryFresh/odin-rock-paper-scissors"
+        ><img
+          src="./images/github-mark-white.svg"
+          alt="github logo"
+          style="height: 20px; width: auto"
+        />
+      </a>
+      <p>BakeryFresh</p>
+    </div>
+  </body>
+  <script src="script.js"></script>
 </html>

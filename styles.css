@@ -1,9 +1,9 @@
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    margin: 0;
-    min-height: 100vh;
-    background-color: #122a36;
+  margin: 0;
+  min-height: 100vh;
+  background-color: #122a36;
 }
 
 /* theme colors 
@@ -15,64 +15,56 @@ blue #37a1a4 */
 .menu-bar,
 .logo,
 .grid-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .header {
-    padding: 100px;
+  padding-bottom: 100px;
 }
 
 .logo {
-    font-size: 60px;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color:#b2533e;
+  font-size: 60px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: #b2533e;
+}
+
+label {
+  color: #b2533e;
 }
 
 .menu-bar {
-    gap:20px;
+  gap: 20px;
 }
 .menu-bar > button {
- background-color: #b2533e;
- border-radius: 15px;
- font-weight: 700;
- width: 100px;
- height: 50px;
+  background-color: #b2533e;
+  border-radius: 15px;
+  font-weight: 700;
+  width: 100px;
+  height: 50px;
 }
 
-.grid-container{
-    display: flex;
-    justify-content: center;
-    
-    
+.grid-container {
+  display: flex;
+  justify-content: center;
 }
 
 .grid {
-    display: grid;
-    grid-auto-rows: 1fr;
-    grid-template-columns: repeat(5, 1fr);
-    background-color: #dfd9da;
-    width: 500px;
-    height: 500px;
-    margin: 100px;
+  display: grid;
+  grid-auto-rows: 1fr;
+  grid-template-columns: repeat(5, 1fr);
+  background-color: #dfd9da;
+  width: 500px;
+  height: 500px;
+  margin-top: 50px;
 }
-
-.cell {
-    border-style: solid;
-    border-width: 1px;
-}
-
-.selectedCell {
-    background-color: red;
-}
-
 
 .footer {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 6px;
-  background-color:#122a36;
+  background-color: #122a36;
   color: #37a1a4;
   position: fixed;
   left: 0;

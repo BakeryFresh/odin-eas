@@ -1,7 +1,7 @@
+window.onload = generateGrid(gridSize.value);
 gridSize = document.getElementById("gridSize");
 grid = document.getElementById("grid");
-
-window.onload = generateGrid(gridSize.value);
+let randomMode = false;
 
 //calls func to generate grid based on slider size
 btnOne = document.getElementById("btnOne");
@@ -16,17 +16,15 @@ btnTwo.addEventListener("click", function () {
   removeChildNodes(grid);
   generateGrid(gridSize.value);
 });
+gridSize.addEventListener("change", () => {
+  removeChildNodes(grid);
+  generateGrid(gridSize.value);
+});
 
-// when a mouse moves over the square set it to red
-let selectedCell = document.querySelectorAll(".cell");
-let selectedCellArray = [...selectedCell];
-
-// selectedCell.forEach((selectedCell) => {
-//   console.log("running 1");
-//   selectedCell.addEventListener("mouseenter", () => {
-//     selectedCell.classList.add("selectedCell");
-//   });
-// });
+btnThree = document.getElementById("btnThree");
+btnThree.addEventListener("click", () => {
+    randomMode = !randomMode;
+});
 
 // generate grid size and sort grid row/column value based on user input.
 // Squares the user choice to create a grid
@@ -35,18 +33,31 @@ function generateGrid(size = 4) {
     "style",
     `grid-template-columns: repeat(${size}, 2fr); grid-template-rows: repeat(${size}, 2fr);`
   );
-  console.log("function started");
+    //make a grid
   size = size * size;
+
   for (let i = 0; i < size; i++) {
     const cell = document.createElement("div");
 
     cell.classList.add("cell");
 
     grid.appendChild(cell);
-    console.log("Div should be added");
+    
 
     cell.addEventListener("mouseenter", () => {
-      cell.classList.add("selectedCell");
+      cell.classList.add("selected");
+      //random mode gives a random color
+      if (randomMode === false) {
+        //go with user's choice of color
+        const colorChoice = document.getElementById("selectColor").value;
+        cell.setAttribute("style", `background-color: ${colorChoice};`);
+        
+      } else {
+        const colorChoice = Math.floor(Math.random()*16777215).toString(16);
+        
+        cell.setAttribute("style", `background-color: #${colorChoice};`);
+
+      }
     });
   }
 }
